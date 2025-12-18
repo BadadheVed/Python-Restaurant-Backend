@@ -1,0 +1,92 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+myenv/
+venv.bak/
+.Python
+
+# pyenv
+.python-version
+
+# pip
+pip-wheel-metadata/
+pip-selfcheck.json
+
+# Distribution / packaging
+build/
+dist/
+eggs/
+*.egg-info/
+*.egg
+*.whl
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+htmlcov/
+coverage.xml
+
+# Translations
+*.mo
+*.pot
+
+# Database files
+*.sqlite3
+*.db
+db.sqlite3
+db.sqlite3-journal
+
+# FastAPI / env
+.env
+.env.*
+instance/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+
+# Logs
+logs/
+*.log
+nohup.out
+
+# Mypy / type checkers
+.mypy_cache/
+.pytype/
+.pyre/
+
+# Celery
+celerybeat-schedule
+
+# Sphinx
+docs/_build/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Docker / local overrides
+docker-compose.override.yml
+.envrc
+
+# Node
+node_modules/
