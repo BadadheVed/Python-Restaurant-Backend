@@ -8,7 +8,7 @@ class Restaurant(Base):
     __tablename__="restaurant"
     id = Column(UUID,primary_key=True,server_default=text("gen_random_uuid()"))
     name = Column(String , nullable=False) 
-    order = relationship(
+    orders = relationship(
         "Order",
         back_populates="restaurant",
         cascade="all, delete-orphan"

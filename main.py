@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from db import init_db
-
+from routers.router import router as restaurant_router
 app = FastAPI()
-
+app.include_router(restaurant_router)
 @app.on_event("startup")
 def startup():
     init_db()
