@@ -3,6 +3,7 @@ from db import SessionLocal
 from fastapi import APIRouter, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
+from uuid import UUID
 
 
 def getAll(page:int,size:int):
@@ -19,3 +20,11 @@ def addRestaurant(name:str):
     db.refresh(new_restaurant)
     db.close()
     return new_restaurant
+
+def getRestaurantById(restaurant_id: UUID):
+    db:Session = SessionLocal()
+    restaurant = db.query(Restaurant).filter(Restaurant.id == restaurant_id).first()
+    db.close()
+    if not restaurant:
+        raise HTTPException(status_code=404, detail="Restaurant not found")
+    return restaurant
