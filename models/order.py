@@ -26,6 +26,7 @@ class Order(Base):
         ForeignKey("restaurant.id"),
         nullable=False
     )
+    name = Column(String, nullable=False)
 
     status = Column(
         SQLEnum(OrderStatus, name="order_status"),

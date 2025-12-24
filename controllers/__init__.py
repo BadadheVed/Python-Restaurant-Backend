@@ -1,4 +1,6 @@
-from .restaurant import getAll
+from .restaurant import *
+from .orders import *
 __all__ = [
-    "getAll",
+    "restaurant",
+    "orders"
 ]

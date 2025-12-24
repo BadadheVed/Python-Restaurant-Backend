@@ -25,7 +25,8 @@ Base = declarative_base()
 
 def init_db():
     from models import Restaurant, Order  # ensure models are registered
-    Base.metadata.create_all(bind=engine)
+   
+    Base.metadata.create_all(bind=engine)  # Recreate with current schema
 
 
 def get_db():
