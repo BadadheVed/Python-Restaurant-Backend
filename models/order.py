@@ -26,6 +26,11 @@ class Order(Base):
         ForeignKey("restaurant.id"),
         nullable=False
     )
+    user_id = Column(
+        UUID(as_uuid=True),
+        ForeignKey("users.id"),
+        nullable=False
+    )
     name = Column(String, nullable=False)
 
     status = Column(
@@ -36,5 +41,9 @@ class Order(Base):
 
     restaurant = relationship(
         "Restaurant",
+        back_populates="orders"
+    )
+    user = relationship(
+        "User",
         back_populates="orders"
     )
